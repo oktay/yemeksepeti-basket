@@ -1,19 +1,18 @@
 import React from 'react';
 import menuData from '../assets/data/menuData.json';
 
+import styles from './List.module.scss';
+import ProductCard from './ProductCard';
+
 function List() {
   const categories = menuData.d.ResultSet;
-  const formatter = new Intl.NumberFormat('tr-TR', {
-    style: 'currency',
-    currency: 'TRY',
-  });
 
   return (
     <div>
-      {categories.map(category => <ul key={category.CategoryName}>
-        <b>{category.CategoryDisplayName}</b>
-        {category.Products.map(product => <li key={product.ProductId}>{product.DisplayName} {formatter.format(parseFloat(product.ListPrice))}</li>)}
-      </ul>)}
+      {categories.map(category => <div className={styles.category} key={category.CategoryName}>
+        <b className={styles.head}>{category.CategoryDisplayName}</b>
+        {category.Products.map(product => <ProductCard key={product.ProductId} product={product} />)}
+      </div>)}
     </div>
   )
 }

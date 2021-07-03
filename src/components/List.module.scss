@@ -1,0 +1,16 @@
+.category {
+  padding: 0;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.category + .category {
+  margin-top: 22px;
+}
+
+.head {
+  display: block;
+  font-size: 16px;
+  padding: 14px 15px;
+  border-bottom: 1px solid #e5e5e5;
+}

@@ -7,7 +7,7 @@ import styles from './Info.module.scss';
 function Info() {
   const restoran = restoranData.d.ResultSet;
   const address = restoran.DeliveryAreas[0]
-  var priceFormatter = new Intl.NumberFormat('tr-TR', {
+  const priceFormatter = new Intl.NumberFormat('tr-TR', {
     style: 'currency',
     currency: 'TRY',
   });

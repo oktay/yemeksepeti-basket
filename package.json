@@ -11,9 +11,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "i": "^0.3.6",
     "normalize.css": "^8.0.1",
+    "npm": "^7.19.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-input-mask": "^2.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.0.0",
