@@ -1,7 +1,11 @@
 .basket {
   position: sticky;
-  top: 20px;
+  top: 107px;
   max-height: 500px;
+
+  @media (max-width: 768px) {
+    position: static;
+  }
 }
 
 .header, .address {

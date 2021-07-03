@@ -10,8 +10,8 @@ function Info() {
   const address = restoran.DeliveryAreas[0]
 
   return (
-    <div className={styles.info} style={{ backgroundImage: `url("//cdn.yemeksepeti.com/App_Themes/SiteHeaders/${restoran.ResturantCuisines[0].ImagePath}")` }}>
-      <img className={styles.logo} src={"//cdn.yemeksepeti.com" + restoran.ImagePath} />
+    <div className={styles.info} style={{ backgroundImage: `url("https://cdn.yemeksepeti.com/App_Themes/SiteHeaders/${restoran.ResturantCuisines[0].ImagePath}")` }}>
+      <img className={styles.logo} src={"https://cdn.yemeksepeti.com" + restoran.ImagePath} />
       <div className={styles.detail}>
         <h1 className={styles.title}>{restoran.DisplayName}</h1>
         <div className={styles.about}>

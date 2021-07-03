@@ -1,6 +1,13 @@
 .header {
   background-color: var(--main-red);
   padding: 21px 0;
+  position: sticky;
+  top: 0;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .headerInner {
