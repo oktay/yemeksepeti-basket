@@ -1,5 +1,7 @@
 .basket {
-
+  position: sticky;
+  top: 20px;
+  max-height: 500px;
 }
 
 .header, .address {
@@ -31,4 +33,19 @@
     font-size: 12px;
     margin-left: 10px;
   }
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  max-height: 350px;
+  overflow: auto;
+}
+
+.total {
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 6px;
 }

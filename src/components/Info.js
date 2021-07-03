@@ -1,20 +1,17 @@
 import React from 'react';
 import restoranData from '../assets/data/restoranData.json';
-import { Price, Motor } from './icons'
+import { Price, Motor } from './icons';
+import { priceFormatter } from '../lib';
 
 import styles from './Info.module.scss';
 
 function Info() {
   const restoran = restoranData.d.ResultSet;
   const address = restoran.DeliveryAreas[0]
-  const priceFormatter = new Intl.NumberFormat('tr-TR', {
-    style: 'currency',
-    currency: 'TRY',
-  });
 
   return (
     <div className={styles.info} style={{ backgroundImage: `url("//cdn.yemeksepeti.com/App_Themes/SiteHeaders/${restoran.ResturantCuisines[0].ImagePath}")` }}>
-      <img className={styles.logo} src="https://cdn.yemeksepeti.com/categoryimages/TR_ISTANBUL/loqmasandwiches_big.gif" />
+      <img className={styles.logo} src={"//cdn.yemeksepeti.com" + restoran.ImagePath} />
       <div className={styles.detail}>
         <h1 className={styles.title}>{restoran.DisplayName}</h1>
         <div className={styles.about}>

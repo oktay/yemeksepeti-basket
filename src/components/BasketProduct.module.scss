@@ -1,0 +1,60 @@
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 9px;
+  padding: 8px 6px;
+  border-bottom: 1px solid #e5e5e5;
+
+  h4 {
+    margin: 0;
+    color: var(--main-orange);
+    font-weight: 400;
+  }
+
+  input {
+    width: 20px;
+    height: 16px;
+    appearance: none;
+    text-align: center;
+    font-size: 9px;
+    border: 1px solid #DCDCDC;
+    box-sizing: border-box;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.258823);
+    border-radius: 2px;
+    margin-right: 5px;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  span {
+    display: inline-block;
+    width: 50px;
+    text-align: right;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.remove {
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--main-red);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}

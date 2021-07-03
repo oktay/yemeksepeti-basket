@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "i": "^0.3.6",
+    "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
     "npm": "^7.19.1",
     "react": "^17.0.2",
