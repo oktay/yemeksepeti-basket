@@ -1,16 +1,28 @@
-import React from 'react';
-import Header from './components/Header';
+import React, { createContext, useState } from 'react';
+import Header from './components/Header'; 
+import Basket from './components/Basket';
+import List from './components/List';
 
 import 'normalize.css';
 import './assets/global.scss';
+import Layout from './components/Layout';
+import Info from './components/Info';
 
-function App() {
+export const BasketContext = createContext();
+
+export default function App() {
+  const [basket, setBasket] = useState([]);
+
   return (
-    <div>
+    <BasketContext.Provider value={{basket, setBasket}}>
       <Header />
-      <h1>Hello World</h1>
-    </div>
+      <Layout>
+        <Basket />
+        <div>
+          <Info />
+          <List />
+        </div>
+      </Layout>
+    </BasketContext.Provider>
   );
 }
-
-export default App;

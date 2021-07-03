@@ -1,0 +1,12 @@
+.layout {
+  display: grid;
+  grid-template-columns: 25% 1fr;
+  max-width: var(--container-w);
+  gap: 10px;
+  margin: 0 auto;
+  padding-top: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
