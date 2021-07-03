@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import restoranData from '../assets/data/restoranData.json';
 import { Price, Motor } from './icons';
 import { priceFormatter } from '../lib';
@@ -11,6 +12,9 @@ function Info() {
 
   return (
     <div className={styles.info} style={{ backgroundImage: `url("https://cdn.yemeksepeti.com/App_Themes/SiteHeaders/${restoran.ResturantCuisines[0].ImagePath}")` }}>
+      <Helmet>
+        <title>{restoran.DisplayName}</title>
+      </Helmet>
       <img className={styles.logo} src={"https://cdn.yemeksepeti.com" + restoran.ImagePath} />
       <div className={styles.detail}>
         <h1 className={styles.title}>{restoran.DisplayName}</h1>
