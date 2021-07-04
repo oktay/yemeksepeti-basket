@@ -50,6 +50,10 @@
       background: #5cbb36;
     }
   }
+
+  @media (max-width: 768px) {
+    flex-shrink: 0;
+  }
 }
 
 .detail {
@@ -77,4 +81,9 @@
   flex-shrink: 0;
   width: 100px;
   text-align: right;
+
+  @media (max-width: 768px) {
+    width: auto;
+    margin-left: 10px;
+  }
 }
