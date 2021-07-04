@@ -1,7 +1,9 @@
 .basket {
+  width: 25%;
   position: sticky;
   top: 107px;
   max-height: 500px;
+  margin-right: 10px;
 
   @media (max-width: 768px) {
     position: static;
@@ -9,7 +11,7 @@
 }
 
 .header, .address {
-  background-color: var(--main-red);
+  background-color: #AB0012;
   color: #fff;
   font-size: 12px;
   font-weight: 700;

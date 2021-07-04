@@ -1,8 +1,6 @@
 .layout {
-  display: grid;
-  grid-template-columns: 25% 1fr;
-  max-width: var(--container-w);
-  gap: 10px;
+  display: flex;
+  max-width: 1010px;
   margin: 0 auto;
   padding: 20px 0;
 

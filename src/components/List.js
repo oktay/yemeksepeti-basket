@@ -8,7 +8,7 @@ function List () {
   const categories = menuData.d.ResultSet
 
   return (
-    <div>
+    <div className={styles.list}>
       {categories.map(category =>
         <div className={styles.category} key={category.CategoryName}>
           <b className={styles.head}>{category.CategoryDisplayName}</b>
