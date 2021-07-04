@@ -1,20 +1,19 @@
-import React, { useContext, useState } from 'react';
-import { Plus } from './icons';
-import { BasketContext } from '../App';
-import { priceFormatter } from '../lib';
+import React, { useContext, useState } from 'react'
+import { Plus } from './icons'
+import { BasketContext } from '../App'
+import { priceFormatter } from '../lib'
 
-import styles from './ProductCard.module.scss';
+import styles from './ProductCard.module.scss'
 
-function ProductCard({ product }) {
+function ProductCard ({ product }) {
+  const [qty, setQty] = useState(1)
+  const { addBasket } = useContext(BasketContext)
 
-  const [qty, setQty] = useState(1);
-  const { addBasket } = useContext(BasketContext);
-
-  function handleChange({ target }) {
+  function handleChange ({ target }) {
     if (target.value > 99) {
-      setQty(99);
+      setQty(99)
     } else if (target.value < 1) {
-      setQty(1);
+      setQty(1)
     } else {
       setQty(parseInt(target.value))
     }
@@ -23,7 +22,7 @@ function ProductCard({ product }) {
   return (
     <div className={styles.card}>
       <div className={styles.actions}>
-        <input value={qty} onChange={handleChange} type="number" />
+        <input value={qty} onChange={handleChange} type='number' />
         <button onClick={() => addBasket(product, qty)}><Plus /></button>
       </div>
       <div className={styles.detail}>

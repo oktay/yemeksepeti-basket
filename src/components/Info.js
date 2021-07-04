@@ -1,13 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
-import restoranData from '../assets/data/restoranData.json';
-import { Price, Motor } from './icons';
-import { priceFormatter } from '../lib';
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import restoranData from '../assets/data/restoranData.json'
+import { Price, Motor } from './icons'
+import { priceFormatter } from '../lib'
 
-import styles from './Info.module.scss';
+import styles from './Info.module.scss'
 
-function Info() {
-  const restoran = restoranData.d.ResultSet;
+function Info () {
+  const restoran = restoranData.d.ResultSet
   const address = restoran.DeliveryAreas[0]
 
   return (
@@ -15,7 +15,7 @@ function Info() {
       <Helmet>
         <title>{restoran.DisplayName}</title>
       </Helmet>
-      <img className={styles.logo} src={"https://cdn.yemeksepeti.com" + restoran.ImagePath} />
+      <img className={styles.logo} src={'https://cdn.yemeksepeti.com' + restoran.ImagePath} />
       <div className={styles.detail}>
         <h1 className={styles.title}>{restoran.DisplayName}</h1>
         <div className={styles.about}>

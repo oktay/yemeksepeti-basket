@@ -1,13 +1,13 @@
-import React from 'react';
-import logoSVG from '../assets/img/logo.svg';
+import React from 'react'
+import logoSVG from '../assets/img/logo.svg'
 
-import styles from './Header.module.scss';
+import styles from './Header.module.scss'
 
-function Header() {
+function Header () {
   return (
     <header className={styles.header}>
       <div className={styles.headerInner}>
-        <a href="/" className={styles.logo}>
+        <a href='/' className={styles.logo}>
           <img src={logoSVG} />
         </a>
       </div>
@@ -15,4 +15,4 @@ function Header() {
   )
 }
 
-export default Header;
+export default Header

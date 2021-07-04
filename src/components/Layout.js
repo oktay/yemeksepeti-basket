@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 
-import styles from './Layout.module.scss';
+import styles from './Layout.module.scss'
 
-function Layout({ children }) {
+function Layout ({ children }) {
   return (
     <main className={styles.layout}>
       {children}
