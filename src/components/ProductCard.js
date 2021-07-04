@@ -1,5 +1,4 @@
 import React, { useContext, useState } from 'react';
-import InputMask from 'react-input-mask';
 import { Plus } from './icons';
 import { BasketContext } from '../App';
 import { priceFormatter } from '../lib';
@@ -31,7 +30,7 @@ function ProductCard({ product }) {
         <h4>{product.DisplayName}</h4>
         <p>{product.Description}</p>
       </div>
-      <span className={styles.price}>{priceFormatter.format(parseFloat(product.ListPrice))}</span>
+      <strong className={styles.price}>{priceFormatter.format(parseFloat(product.ListPrice))}</strong>
     </div>
   )
 }

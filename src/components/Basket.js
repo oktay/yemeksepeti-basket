@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import { BasketContext } from '../App';
 import { priceFormatter } from '../lib';
 import { sum } from 'lodash'
+import BasketProduct from './BasketProduct';
 
 import basketSVG from '../assets/img/basket.svg';
 import styles from './Basket.module.scss';
-import BasketProduct from './BasketProduct';
 
 function Basket() {
   const { basket } = useContext(BasketContext);

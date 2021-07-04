@@ -1,8 +1,8 @@
 import React from 'react';
 import menuData from '../assets/data/menuData.json';
+import ProductCard from './ProductCard';
 
 import styles from './List.module.scss';
-import ProductCard from './ProductCard';
 
 function List() {
   const categories = menuData.d.ResultSet;
