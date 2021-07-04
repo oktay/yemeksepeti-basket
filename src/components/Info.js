@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import restoranData from '../assets/data/restoranData.json'
 import { Price, Motor } from './icons'
 import { priceFormatter } from '../lib'
+import placeholderPNG from '../assets/img/placeholder.png'
 
 import styles from './Info.module.scss'
 
@@ -15,7 +16,7 @@ function Info () {
       <Helmet>
         <title>{restoran.DisplayName}</title>
       </Helmet>
-      <img className={styles.logo} src={'https://cdn.yemeksepeti.com' + restoran.ImagePath} />
+      <img className={styles.logo} src={'https://cdn.yemeksepeti.com' + restoran.ImagePath} onError={(e) => { e.target.onerror = null; e.target.src = placeholderPNG }} />
       <div className={styles.detail}>
         <h1 className={styles.title}>{restoran.DisplayName}</h1>
         <div className={styles.about}>
