@@ -2,10 +2,13 @@ import React from 'react'
 
 import styles from './Layout.module.scss'
 
-function Layout ({ children }) {
+function Layout ({ children, sidebar }) {
   return (
     <main className={styles.layout}>
-      {children}
+      {sidebar}
+      <div className={styles.content}>
+        {children}
+      </div>
     </main>
   )
 }

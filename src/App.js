@@ -36,12 +36,9 @@ export default function App () {
   return (
     <BasketContext.Provider value={{ basket, addBasket, removeBasket, changeQty }}>
       <Header />
-      <Layout>
-        <Basket />
-        <div>
-          <Info />
-          <List />
-        </div>
+      <Layout sidebar={<Basket />}>
+        <Info />
+        <List />
       </Layout>
     </BasketContext.Provider>
   )

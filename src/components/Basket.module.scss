@@ -1,9 +1,10 @@
 .basket {
+  max-height: 500px;
   width: 25%;
   position: sticky;
   top: 107px;
-  max-height: 500px;
   margin-right: 10px;
+  flex-shrink: 0;
 
   @media (max-width: 768px) {
     position: static;
